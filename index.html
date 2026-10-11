@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartify | Online Shopping</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">Cartify<span>.</span></a>
+
+    <div class="search-box">
+      <input type="text" id="searchInput"
+        placeholder="Search products...">
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <a href="#cart" class="cart-link">
+      🛒 Cart <span id="cartCount">0</span>
+    </a>
+  </header>
+
+  <section class="hero">
+    <div>
+      <p class="eyebrow">YOUR EVERYDAY MARKETPLACE</p>
+      <h1>Shopping made<br>simple.</h1>
+      <p>Discover your favourites at amazing prices.</p>
+      <a href="#products" class="shop-btn">Shop Now →</a>
+    </div>
+    <div class="hero-art">🛍️</div>
+  </section>
+
+  <main class="container" id="products">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">OUR COLLECTION</p>
+        <h2>Explore Products</h2>
+      </div>
+
+      <select id="categoryFilter" aria-label="Filter by category">
+        <option value="All">All Categories</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Accessories">Accessories</option>
+      </select>
+    </div>
+
+    <div id="productGrid" class="product-grid"></div>
+    <p id="noProducts" class="empty-message" hidden>
+      No products found. Try another search.
+    </p>
+
+    <section class="cart-section" id="cart">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">READY WHEN YOU ARE</p>
+          <h2>Your Shopping Cart</h2>
+        </div>
+        <button id="clearCart" class="text-btn">Clear Cart</button>
+      </div>
+
+      <div class="cart-layout">
+        <div id="cartItems" class="cart-items">
+          <div class="empty-cart">
+            <span>🛒</span>
+            <h3>Your cart is empty</h3>
+            <p>Add products to see them here.</p>
+          </div>
+        </div>
+
+        <aside class="summary">
+          <h3>Order Summary</h3>
+
+          <div class="summary-line">
+            <span>Subtotal</span>
+            <span id="subtotal">₹0.00</span>
+          </div>
+
+          <div class="summary-line">
+            <span>Discount</span>
+            <span id="discount" class="saving">− ₹0.00</span>
+          </div>
+
+          <div class="summary-line">
+            <span>Tax (5%)</span>
+            <span id="tax">₹0.00</span>
+          </div>
+
+          <div class="summary-line">
+            <span>Delivery</span>
+            <span id="delivery">₹0.00</span>
+          </div>
+
+          <div class="coupon">
+            <input id="couponInput" type="text"
+              placeholder="Coupon code">
+            <button id="applyCoupon">Apply</button>
+          </div>
+          <p id="couponMessage" class="coupon-message"></p>
+
+          <div class="total-line">
+            <span>Total</span>
+            <span id="total">₹0.00</span>
+          </div>
+
+          <p class="small-note">
+            Free delivery on orders above ₹999.
+            Get 10% off orders above ₹2,000.
+          </p>
+
+          <button id="checkoutBtn" class="checkout-btn">
+            Proceed to Checkout →
+          </button>
+          <p class="demo-note">Frontend demo • No real payment</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo">Cartify<span>.</span></a>
+    <p>College Project | Online Shopping Cart</p>
+    <p>Built with HTML, CSS & JavaScript</p>
+  </footer>
+
+  <div id="toast" class="toast" role="status"
+    aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
